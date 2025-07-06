@@ -4,22 +4,22 @@ import { Outlet } from 'react-router-dom';
 import { login, register } from '../utils/auth';
 import { useNavigate } from 'react-router-dom';
 
-// CodeMetrics Logo Component
-const CodeMetricsLogo = () => (
+// CodeTrack Logo Component
+const CodeTrackLogo = () => (
   <div className="flex items-center">
     <div className="relative h-16 w-20">
       {/* Center logo image */}
       <div className="absolute left-4 right-4 top-1/2 -translate-y-1/2 flex justify-center">
         <img
           src="/logo2.png" // Make sure this exists in the public folder
-          alt="Codemetrics Logo"
+          alt="CodeTrack Logo"
           className="h-12 object-contain" // Increased from h-8 to h-12
         />
       </div>
     </div>
 
     <span className="font-extrabold text-3xl text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-400">
-      CodeMetrics
+      CodeTrack
     </span>
   </div>
 );
@@ -119,9 +119,9 @@ export default function AuthPages() {
         </div>
       )}
       
-      {/* Logo and Header - Replaced with CodeMetricsLogo */}
+      {/* Logo and Header - Replaced with CodeTrackLogo */}
       <div className="mb-6">
-        <CodeMetricsLogo />
+        <CodeTrackLogo />
       </div>
       
       {/* Auth Container */}
@@ -294,7 +294,7 @@ export default function AuthPages() {
       
       {/* Footer */}
       <div className="mt-8 text-sm text-gray-400">
-        <p>© 2025 CodeMetrics. All rights reserved.</p>
+        <p>© 2025 CodeTrack. All rights reserved.</p>
       </div>
     </div>
   );

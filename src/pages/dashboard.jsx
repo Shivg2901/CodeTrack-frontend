@@ -16,21 +16,21 @@ import {
 } from 'lucide-react';
 import { useNavigate,useParams } from 'react-router-dom';
 
-// CodeMetrics Logo Component
+// CodeTrack Logo Component
 const CodeTrackLogo = () => (
   <div className="flex items-center group">
     <div className="relative h-12 sm:h-16 w-16 sm:w-20">
       <div className="absolute left-2 right-2 sm:left-4 sm:right-4 top-1/2 -translate-y-1/2 flex justify-center">
         <img
           src="/logo2.png"
-          alt="Codemetrics Logo"
+          alt="CodeTrack Logo"
           className="h-8 sm:h-12 object-contain group-hover:scale-110 transition-transform duration-300"
         />
       </div>
     </div>
     <div className="relative">
       <span className="font-extrabold text-xl sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-400">
-        CodeMetrics
+        CodeTrack
       </span>
       <div className="absolute -bottom-1 left-0 w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-blue-400 to-indigo-500 transition-all duration-300"></div>
     </div>
@@ -44,8 +44,8 @@ const CPDashboard = () => {
   const [shareSuccess, setShareSuccess] = useState(false);
   
   const feedbackFormUrl = "https://forms.gle/XqQ8CFTPYECdVLZ17";
-  const shareUrl = "https://codemetrics-rosy.vercel.app/";
-  const shareMessage = "Check out CodeMetrics - the ultimate tool for tracking competitive programming progress! Join me in improving our coding skills.";
+  const shareUrl = "https://CodeTrack-rosy.vercel.app/";
+  const shareMessage = "Check out CodeTrack - the ultimate tool for tracking competitive programming progress! Join me in improving our coding skills.";
 
   // Handle go back function
   const handleGoBack = () => {
@@ -60,7 +60,7 @@ const CPDashboard = () => {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'CodeMetrics',
+          title: 'CodeTrack',
           text: shareMessage,
           url: shareUrl,
         });

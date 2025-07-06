@@ -14,6 +14,7 @@ import {
   ChevronsUp,
   Github,
   Plus,
+  ArrowLeft,
 } from "lucide-react";
 import { useNavigate, useParams } from "react-router-dom";
 import { fetchusernames } from "../utils/user";
@@ -350,9 +351,21 @@ const Leaderboard = () => {
     fetchUserData();
   };
 
+  const handleGoBack = () => {
+    navigate(-1);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900 text-gray-100 py-8 px-4">
       <div className="max-w-6xl mx-auto">
+        <div className="mb-6">
+          <button 
+                          onClick={handleGoBack}
+                          className="bg-blue-600/80 hover:bg-blue-500 p-2 sm:p-2.5 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-lg hover:shadow-blue-500/20"
+                        >
+                          <ArrowLeft className="h-4 w-4 sm:h-5 sm:w-5" />
+                        </button>
+        </div>
         <header className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 text-5xl font-bold mb-4">
             <Code size={48} className="text-cyan-400" />
@@ -621,15 +634,6 @@ const Leaderboard = () => {
 
             <footer className="flex flex-wrap justify-between items-center text-sm text-gray-400 gap-2 mt-4 p-4 bg-gray-800/40 backdrop-blur-sm rounded-xl border border-blue-900/30">
               <p>Last updated: {new Date().toLocaleString()}</p>
-              <a
-                href="https://github.com/sarbojitrana/CodeMetrics_Frontend"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-cyan-300 transition-colors bg-gray-700/50 hover:bg-gray-700 px-3 py-1.5 rounded-lg"
-              >
-                <Github size={16} />
-                <span>View source code</span>
-              </a>
             </footer>
           </div>
         )}

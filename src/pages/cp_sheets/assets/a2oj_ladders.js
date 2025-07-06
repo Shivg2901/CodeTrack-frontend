@@ -291,3 +291,18 @@ export const div_c = [
     [84, 'Heroes', '77', 'A'] ,
     [85, 'Literature Lesson', '138', 'A']
 ]
+
+export const div_d = [];
+export const div_e = [];
+
+export const rating_1 = [];
+export const rating_2 = [];
+export const rating_3 = [];
+export const rating_4 = [];
+export const rating_5 = [];
+export const rating_6 = [];
+export const rating_7 = [];
+export const rating_8 = [];
+export const rating_9 = [];
+export const rating_10 = [];
+export const rating_11 = [];

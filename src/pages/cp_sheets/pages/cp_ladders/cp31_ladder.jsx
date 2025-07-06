@@ -98,58 +98,15 @@ const CP31_ladder = () => {
   const filteredProblems = getFilteredProblems();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-950 to-indigo-900 py-8 px-4 overflow-hidden relative">
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-10 left-10 w-96 h-96 bg-blue-500 opacity-10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-40 right-20 w-64 h-64 bg-indigo-600 opacity-10 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/3 right-1/4 w-32 h-32 bg-cyan-400 opacity-10 rounded-full blur-xl animate-pulse"></div>
-      </div>
-
-      {showConfetti && (
-        <div className="fixed inset-0 pointer-events-none z-50">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="p-8 bg-gray-800/80 backdrop-blur-lg rounded-xl border border-blue-500/30 shadow-2xl max-w-md">
-              <div className="text-center">
-                <Trophy className="h-16 w-16 text-yellow-400 mx-auto mb-4" />
-                <h2 className="text-2xl font-bold text-white mb-2">Achievement Unlocked!</h2>
-                <p className="text-gray-300">You've solved over 75% of problems in this ladder!</p>
-              </div>
-            </div>
-          </div>
-          {[...Array(50)].map((_, i) => {
-            const size = Math.random() * 10 + 5;
-            const left = Math.random() * 100;
-            const animationDuration = Math.random() * 3 + 2;
-            const colors = ['bg-blue-500', 'bg-green-500', 'bg-yellow-400', 'bg-pink-500', 'bg-purple-500'];
-            const color = colors[Math.floor(Math.random() * colors.length)];
-            
-            return (
-              <div 
-                key={i}
-                className={`absolute ${color} rounded-sm`}
-                style={{
-                  width: `${size}px`,
-                  height: `${size}px`,
-                  left: `${left}%`,
-                  top: '-20px',
-                  opacity: Math.random() * 0.7 + 0.3,
-                  animation: `confetti ${animationDuration}s linear forwards`,
-                  transform: `rotate(${Math.random() * 360}deg)`
-                }}
-              ></div>
-            );
-          })}
-        </div>
-      )}
-
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white font-sans">
       <div className="mx-auto max-w-5xl relative">
-        <div className="backdrop-blur-x bg-black/40  rounded-2xl shadow-2xl p-8 mb-8 border border-gray-700/50 transform transition-all hover:border-blue-500/30 duration-500">
-          <Link to="/cp-sheets" className="inline-flex items-center text-gray-400 hover:text-blue-400 mb-6 transition-all duration-300 group">
-            <div className="p-2 rounded-full bg-gray-800/80 border border-gray-700/50 mr-2 group-hover:border-blue-500/50 transition-all duration-300">
-              <ArrowLeft className="h-4 w-4 group-hover:scale-110 transition-transform" />
-            </div>
-            <span>Back to Ladder Selection</span>
-          </Link>
+        <div className="backdrop-blur-xl bg-black/40  rounded-2xl shadow-2xl p-8 mb-8 border border-gray-700/50 transform transition-all hover:border-blue-500/30 duration-500">
+          <div className="flex items-center gap-4 mb-6">
+            <Link to="/cp-sheets" className="bg-blue-600/80 hover:bg-blue-500 p-2.5 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-lg hover:shadow-blue-500/20">
+              <ArrowLeft className="h-5 w-5 text-white" />
+            </Link>
+            <span className="text-gray-400">Back to Ladder Selection</span>
+          </div>
 
           <div className="text-center mb-8">
             <div className="flex justify-center mb-4">

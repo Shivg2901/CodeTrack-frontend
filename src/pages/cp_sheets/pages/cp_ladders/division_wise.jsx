@@ -135,12 +135,12 @@ const Division_Ladder = () => {
 
       <div className="mx-auto max-w-5xl relative">
         <div className="backdrop-blur-xl bg-black/40 rounded-2xl shadow-2xl p-8 mb-8 border border-gray-700/50 transform transition-all hover:border-indigo-500/30 duration-500">
-          <Link to="/cp-sheets" className="inline-flex items-center text-gray-400 hover:text-indigo-400 mb-6 transition-all duration-300 group">
-            <div className="p-2 rounded-full bg-gray-800/80 border border-gray-700/50 mr-2 group-hover:border-indigo-500/50 transition-all duration-300">
-              <ArrowLeft className="h-4 w-4 group-hover:scale-110 transition-transform" />
-            </div>
-            <span>Back to Ladder Selection</span>
-          </Link>
+          <div className="flex items-center gap-4 mb-6">
+            <Link to="/cp-sheets" className="bg-blue-600/80 hover:bg-blue-500 p-2.5 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-lg hover:shadow-blue-500/20">
+              <ArrowLeft className="h-5 w-5 text-white" />
+            </Link>
+            <span className="text-gray-400">Back to Ladder Selection</span>
+          </div>
 
           <div className="text-center mb-8">
             <div className="flex justify-center mb-4">
