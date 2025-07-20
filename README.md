@@ -104,6 +104,7 @@ npm run preview
 
 ## 🧩 Main Components
 
+<<<<<<< HEAD
 - `CodeTrackLogo`: Animated logo
 - `ProfileCard`: User profile display
 - `AchievementCard`: Achievement progress
@@ -121,6 +122,18 @@ npm run preview
 
 ## 📊 Project Structure
 
+=======
+### Adding Competitors
+```javascript
+
+navigate(`/username-management/${email}`);
+
+// Add a new competitor
+const response = await add(userId, username.trim());
+if (response.success) {
+  setUsernames(prev => [...prev, response.user]);
+}
+>>>>>>> e495df67bbb23a09d88c664ccb7110c8c581ed25
 ```
 src/
 ├── components/          # Reusable UI components
