@@ -1,20 +1,6 @@
 import React, { useState, useEffect } from "react";
-import {
-  Code,
-  Layers,
-  BookOpen,
-  ExternalLink,
-  ArrowRight,
-  Activity,
-  Hash,
-  Award,
-  Star,
-  FileText,
-  Clock,
-  Users,
-} from "lucide-react";
+import { Code, BookOpen, Activity, Clock } from "lucide-react";
 import CP31 from "./cp31_page";
-import A2oJ from "./A2oj_page";
 
 const Cp_Sheets = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -27,12 +13,11 @@ const Cp_Sheets = () => {
 
   const handleTabChange = (tabIndex) => {
     if (tabIndex === activeTab) return;
-    
     setActiveTab(tabIndex);
-    setPage(tabIndex === 0 ? <CP31 /> : <A2oJ />);
+    setPage(<CP31 />);
   };
 
-  // Detailed tab data with additional information
+  // Simplified tab data - only CP31
   const tabs = [
     {
       title: "CP31 Sheet",
@@ -46,60 +31,10 @@ const Cp_Sheets = () => {
       difficulty: "Beginner to Advanced",
       tags: ["Implementation", "Greedy", "DP", "Graphs"],
     },
-    {
-      title: "A2OJ Ladder",
-      icon: <Layers />,
-      description:
-        "Difficulty-based problem sets organized as a ladder to improve your rating",
-      color: "from-indigo-600 to-indigo-800",
-      lightColor: "from-indigo-500/20 to-indigo-700/20",
-      problemCount: 1350,
-      topics: 42,
-      difficulty: "Rating-based",
-      tags: ["Div 2", "Div 1", "Contest Problems"],
-    },
-  ];
-
-  // Feature cards for each tab
-  const features = [
-    [
-      {
-        icon: <FileText />,
-        title: "450+ Problems",
-        description: "Carefully selected problems",
-      },
-      {
-        icon: <Activity />,
-        title: "Progressive Difficulty",
-        description: "From easy to challenging",
-      },
-      {
-        icon: <BookOpen />,
-        title: "31 Core Topics",
-        description: "Comprehensive coverage",
-      },
-    ],
-    [
-      {
-        icon: <Star />,
-        title: "Rating Based",
-        description: "Problems by CF rating",
-      },
-      {
-        icon: <Users />,
-        title: "Community Favorite",
-        description: "Used by thousands",
-      },
-      {
-        icon: <Clock />,
-        title: "Time Tested",
-        description: "Proven learning path",
-      },
-    ],
   ];
 
   return (
-    <div className="min-h-full">
+    <div className="min-h-full text-white">
       {/* Tab Navigation */}
       <div className="mb-6">
         <div className="flex flex-wrap justify-center gap-3 mb-6">
@@ -139,10 +74,42 @@ const Cp_Sheets = () => {
         </div>
       </div>
 
-      {/* Content Area with Simple Transition */}
+      {/* Content Area */}
       <div className="backdrop-blur-xl rounded-xl shadow-xl border border-gray-700/50 overflow-hidden">
-        <div className="transition-opacity duration-300 p-6">
-          {page}
+        <div className="transition-opacity duration-300 p-6">{page}</div>
+      </div>
+
+      {/* Simplified description section */}
+      <div className="mt-8 max-w-4xl mx-auto">
+        <div className="p-6 rounded-xl border border-blue-500/30 shadow-blue-500/20">
+          <div className="flex items-center gap-4 mb-4">
+            <div className="p-3 rounded-full bg-gradient-to-r from-blue-600 to-indigo-700">
+              <Code className="h-6 w-6 text-white" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold">CP31</h3>
+              <p className="text-sm text-gray-400">Problem Set</p>
+            </div>
+          </div>
+          <p className="text-gray-300 mb-4">
+            A curated collection of problems designed to improve your competitive
+            programming skills systematically.
+          </p>
+          <div className="flex flex-wrap gap-4 mb-4">
+            <span className="text-xs bg-gray-800 rounded-full px-3 py-1">
+              31 Problems
+            </span>
+            <span className="text-xs bg-gray-800 rounded-full px-3 py-1">
+              Rating Based
+            </span>
+            <span className="text-xs bg-gray-800 rounded-full px-3 py-1">
+              Progress Tracking
+            </span>
+          </div>
+          <div className="flex gap-4 text-sm text-gray-500">
+            <span>Difficulty: Beginner to Intermediate</span>
+            <span>Estimated Time: 2-4 weeks</span>
+          </div>
         </div>
       </div>
     </div>

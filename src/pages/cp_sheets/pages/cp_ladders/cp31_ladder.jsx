@@ -344,7 +344,7 @@ const CP31_ladder = () => {
         </div>
       </div>
       
-      <style jsx>{`
+      <style jsx="true">{`
         @keyframes confetti {
           0% { 
             transform: translateY(0) rotate(0deg);
