@@ -134,13 +134,12 @@ npm run preview
 
 ### Adding Competitors
 ```javascript
-// Navigate to competitor management
+
 navigate(`/username-management/${email}`);
 
 // Add a new competitor
 const response = await add(userId, username.trim());
 if (response.success) {
-  // Competitor added successfully
   setUsernames(prev => [...prev, response.user]);
 }
 ```
