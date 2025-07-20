@@ -1,104 +1,80 @@
 <div align="center">
   <img src="public/logo2.png" alt="CodeTrack Logo" width="120" height="120">
-  
+
   # 🚀 CodeTrack Frontend
-  
-  **Track your competitive programming journey with style**
-  
+
+  **Track your competitive programming journey with style and analytics**
+
   [![React](https://img.shields.io/badge/React-18.x-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
   [![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
   [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-  
-  [🌟 Live Demo](https://codetrack-rosy.vercel.app/) • [📖 Documentation](#documentation) • [🐛 Report Bug](https://forms.gle/fvUhcbL7WSUY4UE37) • [💡 Request Feature](https://forms.gle/fvUhcbL7WSUY4UE37)
-  
+
+  [🌟 Live Demo](https://codetrack-rosy.vercel.app/) • [📖 Docs](#documentation) • [🐛 Report Bug](https://forms.gle/fvUhcbL7WSUY4UE37) • [💡 Request Feature](https://forms.gle/fvUhcbL7WSUY4UE37)
 </div>
 
 ---
 
 ## ✨ Features
 
-### 🎯 Core Features
-- **🏆 Personal Leaderboard** - Track your progress against friends and competitors
-- **📊 Competitor Management** - Add and monitor Codeforces usernames
-- **📚 CP Sheets** - Curated problem sets with difficulty progression (CP31 Sheet)
-- **📅 Contest Tracking** - Stay updated with upcoming programming contests
-- **👤 Profile Management** - Detailed user profiles with statistics and achievements
-
-### 🔥 Advanced Features
-- **📈 Progress Analytics** - Detailed charts and statistics using Recharts
-- **🎨 Beautiful UI** - Modern dark theme with gradient effects and animations
-- **📱 Responsive Design** - Optimized for desktop, tablet, and mobile devices
-- **⚡ Real-time Updates** - Live data from Codeforces API
-- **🔗 Platform Integration** - Connect with Codeforces, LeetCode, and GitHub
-- **🎪 Interactive Components** - Smooth animations and hover effects
+- **🏆 Personal Leaderboard**: Track your progress against friends and competitors
+- **📊 Competitor Management**: Add and monitor Codeforces usernames
+- **📚 CP Sheets**: Curated problem sets with difficulty progression (CP31 Sheet)
+- **📅 Contest Tracking**: Stay updated with upcoming programming contests
+- **👤 Profile Management**: Detailed user profiles with statistics and achievements
+- **📈 Progress Analytics**: Charts and statistics using Recharts
+- **🎨 Beautiful UI**: Modern dark theme with gradients and animations
+- **📱 Responsive Design**: Optimized for all devices
+- **⚡ Real-time Updates**: Live data from Codeforces API
 
 ---
 
 ## 🛠️ Tech Stack
 
-<div align="center">
-
 | Frontend | Styling | Tools | APIs |
 |----------|---------|-------|------|
-| ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) | ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) | ![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E) | ![Codeforces](https://img.shields.io/badge/Codeforces-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white) |
-| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) | ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) | ![ESLint](https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white) | ![REST API](https://img.shields.io/badge/REST-02569B?style=for-the-badge&logo=rest&logoColor=white) |
+| React    | Tailwind CSS | Vite | Codeforces API |
+| JavaScript | CSS3 | ESLint | REST API |
 
-</div>
-
-### 📦 Key Dependencies
-- **React Router** - Client-side routing
-- **Recharts** - Data visualization and charts
-- **Lucide React** - Beautiful icons
-- **Axios** - HTTP client for API calls
+**Key Dependencies:** React Router, Recharts, Lucide React, Axios
 
 ---
 
 ## 🚀 Quick Start
 
-### Prerequisites
-- **Node.js** (v18.0.0 or higher)
-- **npm** or **yarn** package manager
-- **Git** for version control
+**Prerequisites:**  
+- Node.js (v18+)
+- npm or yarn
+- Git
 
-### Installation
+**Installation:**
+```bash
+git clone https://github.com/your-username/codetrack-frontend.git
+cd codetrack-frontend
+npm install
+# or
+yarn install
+```
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/codetrack-frontend.git
-   cd codetrack-frontend
-   ```
+**Environment Variables:**
+```bash
+cp .env.example .env.local
+```
+Edit `.env.local`:
+```env
+VITE_API_BASE_URL=http://localhost:5000/api
+VITE_CODEFORCES_API_URL=https://codeforces.com/api
+```
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+**Start Development:**
+```bash
+npm run dev
+# or
+yarn dev
+```
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-3. **Set up environment variables**
-   ```bash
-   cp .env.example .env.local
-   ```
-   
-   Edit `.env.local` and add your configuration:
-   ```env
-   VITE_API_BASE_URL=http://localhost:5000/api
-   VITE_CODEFORCES_API_URL=https://codeforces.com/api
-   ```
-
-4. **Start the development server**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-5. **Open your browser**
-   Navigate to `http://localhost:5173`
-
-### 🏗️ Build for Production
-
+**Build for Production:**
 ```bash
 npm run build
 npm run preview
@@ -106,84 +82,108 @@ npm run preview
 
 ---
 
-## 📱 Screenshots
+## 📸 Screenshots
 
 <div align="center">
 
-### 🏠 Dashboard
-![Dashboard](docs/images/dashboard.png)
-*Beautiful gradient dashboard with quick access to all features*
+**Dashboard**  
+<img src="CodeTrack-frontend\public\dashboard.png" width="600" alt="Dashboard" />
 
-### 🏆 Leaderboard
-![Leaderboard](docs/images/leaderboard.png)
-*Track your progress against competitors with detailed statistics*
+**Leaderboard**  
+<img src="CodeTrack-frontend\public\leaderboard.png" width="600" alt="Leaderboard" />
 
-### 📚 CP Sheets
-![CP Sheets](docs/images/cp-sheets.png)
-*Structured problem sets for skill improvement*
+**CP Sheets**  
+<img src="CodeTrack-frontend\public\cp-sheets.png" width="600" alt="CP Sheets" />
 
-### 👤 Profile Management
-![Profile](docs/images/profile.png)
-*Comprehensive user profiles with platform integration*
+**Profile Management**  
+<img src="CodeTrack-frontend\public\profile.png" width="600" alt="Profile" />
 
 </div>
 
 ---
 
-## 🎯 Usage Examples
+## 🧩 Main Components
 
-### Adding Competitors
-```javascript
-// Navigate to competitor management
-navigate(`/username-management/${email}`);
+- `CodeTrackLogo`: Animated logo
+- `ProfileCard`: User profile display
+- `AchievementCard`: Achievement progress
+- `UsernameAdder`: Add competitors with validation
 
-// Add a new competitor
-const response = await add(userId, username.trim());
-if (response.success) {
-  // Competitor added successfully
-  setUsernames(prev => [...prev, response.user]);
-}
+**Main Pages:**
+- `AuthPage`: Login/register
+- `Dashboard`: Main app dashboard
+- `UsernameManagement`: Competitor management
+- `ProfilePage`: User profile & stats
+- `CoursePage`: CP sheets & contests
+- `UserDetailsPage`: Codeforces profile analysis
+
+---
+
+## 📊 Project Structure
+
 ```
-
-### Fetching User Data
-```javascript
-// Get user statistics from Codeforces
-const userResponse = await fetch(
-  `https://codeforces.com/api/user.info?handles=${username}`
-);
-const userData = await userResponse.json();
+src/
+├── components/          # Reusable UI components
+├── pages/               # Main application pages
+│   └── cp_sheets/
+├── utils/               # Utility functions
+├── assets/              # Static assets
+└── styles/              # Global styles
 ```
 
 ---
 
-## 🌟 Key Components
+## 🔗 API Integration
 
-### 🧩 Reusable Components
-- **`CodeTrackLogo`** - Animated logo component
-- **`ProfileCard`** - User profile display with editing capabilities
-- **`AchievementCard`** - Achievement display with progress tracking
-- **`UsernameAdder`** - Add competitors with validation
+- **Codeforces API**: `/api/user.info`, `/api/user.status`, `/api/contest.list`
+- **Backend API**: `/api/auth/login`, `/api/auth/register`, `/api/user/add`, `/api/user/remove`, `/api/user/fetch`
 
-### 📄 Main Pages
-- **`AuthPage`** - User authentication (login/register)
-- **`Dashboard`** - Main application dashboard
-- **`UsernameManagement`** - Competitor management interface
-- **`ProfilePage`** - User profile with tabs and statistics
-- **`CoursePage`** - CP sheets and contest information
-- **`UserDetailsPage`** - Detailed Codeforces profile analysis
+---
+
+## 🌐 Deployment
+
+**Vercel:**  
+- Connect repo, set build command: `npm run build`, output: `dist`
+- Set environment variables in dashboard
+
+**Other:**  
+- Netlify: Deploy `dist` after `npm run build`
+- GitHub Pages: Deploy `dist` to `gh-pages`
+- Firebase Hosting: Use `firebase deploy`
 
 ---
 
 ## 🤝 Contributing
 
-We love contributions! Here's how you can help:
+- Fork & PRs welcome!
+- Report bugs or request features via [Google Form](https://forms.gle/fvUhcbL7WSUY4UE37)
+- Follow ESLint config and React best practices
 
-### 🐛 Reporting Bugs
-1. Check if the bug is already reported in [Issues](https://github.com/your-username/codetrack-frontend/issues)
-2. Create a new issue with detailed description
-3. Include screenshots and error messages
+---
 
-### 💡 Suggesting Features
+## 📞 Support & Community
+
+- [Bug Reports](https://forms.gle/fvUhcbL7WSUY4UE37)
+- [Feature Requests](https://forms.gle/fvUhcbL7WSUY4UE37)
+- Email: support@codetrack.dev
+- Discord: [Join our community](https://discord.gg/codetrack)
+
+---
+
+## 📄 License
+
+MIT License. See [LICENSE](LICENSE).
+
+---
+
+<div align="center">
+
+⭐ **Star this repo if you found it helpful!**  
+_Made with ❤️ by the CodeTrack team_
+
+[🌟 Star](https://github.com/your-username/codetrack-frontend) • [🍴 Fork](https://github.com/your-username/codetrack-frontend/fork) • [📝 Contribute](CONTRIBUTING.md) • [🐛 Issues](https://github.com/your-username/codetrack-frontend/issues)
+
+</div>
 1. Open a [Feature Request](https://forms.gle/fvUhcbL7WSUY4UE37)
 2. Describe the feature and its benefits
 3. Add mockups or examples if possible
@@ -313,42 +313,11 @@ src/
 
 - 🐛 [Bug Reports](https://forms.gle/fvUhcbL7WSUY4UE37)
 - 💡 [Feature Requests](https://forms.gle/fvUhcbL7WSUY4UE37)
-- 📧 Email: support@codetrack.dev
-- 💬 Discord: [Join our community](https://discord.gg/codetrack)
-
 ---
 
 ## 📄 License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
-
-- **Codeforces** for providing the comprehensive API
-- **React Team** for the amazing framework
-- **Tailwind CSS** for the utility-first styling
-- **Vercel** for seamless deployment
-- **Contributors** who helped improve this project
-
----
-
-## 🚀 What's Next?
-
-### 🔜 Upcoming Features
-- [ ] **LeetCode Integration** - Full support for LeetCode statistics
-- [ ] **Team Competitions** - Create and join programming teams
-- [ ] **Achievement System** - Unlock badges and rewards
-- [ ] **Practice Recommendations** - AI-powered problem suggestions
-- [ ] **Mobile App** - React Native mobile application
-- [ ] **Dark/Light Theme** - Theme switching capability
-
-### 🎯 Roadmap
-- **Q1 2024**: Mobile responsiveness improvements
-- **Q2 2024**: Advanced analytics dashboard
-- **Q3 2024**: Social features and community
-- **Q4 2024**: AI-powered recommendations
 
 ---
 
