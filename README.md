@@ -87,16 +87,16 @@ npm run preview
 <div align="center">
 
 **Dashboard**  
-<img src="CodeTrack-frontend\public\dashboard.png" width="600" alt="Dashboard" />
+<img src="public/dashboard.png" width="600" alt="Dashboard" />
 
 **Leaderboard**  
-<img src="CodeTrack-frontend\public\leaderboard.png" width="600" alt="Leaderboard" />
+<img src="public/leaderboard.png" width="600" alt="Leaderboard" />
 
 **CP Sheets**  
-<img src="CodeTrack-frontend\public\cp-sheets.png" width="600" alt="CP Sheets" />
+<img src="public/cp-sheets.png" width="600" alt="CP Sheets" />
 
 **Profile Management**  
-<img src="CodeTrack-frontend\public\profile.png" width="600" alt="Profile" />
+<img src="public/profile.png" width="600" alt="Profile" />
 
 </div>
 
