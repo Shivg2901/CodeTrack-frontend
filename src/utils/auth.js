@@ -1,6 +1,5 @@
 import axios from "axios";
 const link = import.meta.env.VITE_BACKEND_LINK;
-//console.log("Backend link:", link); // Debug log
 const login = async (email, password) => {
     try {
         const body = { email, password };
