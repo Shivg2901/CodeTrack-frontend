@@ -10,7 +10,7 @@
   [![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
   [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-  [🌟 Live Demo](https://codetrack-rosy.vercel.app/) • [📖 Docs](#documentation) • [🐛 Report Bug](https://forms.gle/fvUhcbL7WSUY4UE37) • [💡 Request Feature](https://forms.gle/fvUhcbL7WSUY4UE37)
+  [🌟 Live Demo](https://codetrack-frontend.vercel.app/) • [📖 Docs](#documentation) • [🐛 Report Bug](https://forms.gle/fvUhcbL7WSUY4UE37) • [💡 Request Feature](https://forms.gle/fvUhcbL7WSUY4UE37)
 </div>
 
 ---
@@ -62,7 +62,7 @@ cp .env.example .env.local
 ```
 Edit `.env.local`:
 ```env
-VITE_API_BASE_URL=http://localhost:5000/api
+VITE_API_BASE_URL=https://codetrack-backend-9val.onrender.com/api
 VITE_CODEFORCES_API_URL=https://codeforces.com/api
 VITE_MONGO_URI=mongodb+srv://CodeTrack:qlvonOtyy8pnqK6n@codetrack.jiuaqby.mongodb.net/
 ```
@@ -150,7 +150,7 @@ src/
 ## 🔗 API Integration
 
 - **Codeforces API**: `/api/user.info`, `/api/user.status`, `/api/contest.list`
-- **Backend API**: `/api/auth/login`, `/api/auth/register`, `/api/user/add`, `/api/user/remove`, `/api/user/fetch`
+- **Backend API**: `https://codetrack-backend-9val.onrender.com/api/auth/login`, `https://codetrack-backend-9val.onrender.com/api/auth/register`, `https://codetrack-backend-9val.onrender.com/api/user/add`, `https://codetrack-backend-9val.onrender.com/api/user/remove`, `https://codetrack-backend-9val.onrender.com/api/user/fetch`
 
 ---
 
