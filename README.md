@@ -10,7 +10,7 @@
   [![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
   [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-  [🌟 Live Demo](https://codetrack-frontend.vercel.app/) • [📖 Docs](#documentation) • [🐛 Report Bug](https://forms.gle/fvUhcbL7WSUY4UE37) • [💡 Request Feature](https://forms.gle/fvUhcbL7WSUY4UE37)
+  [🌟 Live Demo](https://code-track-fontend.vercel.app/) • [📖 Docs](#documentation) • [🐛 Report Bug](https://forms.gle/fvUhcbL7WSUY4UE37) • [💡 Request Feature](https://forms.gle/fvUhcbL7WSUY4UE37)
 </div>
 
 ---
