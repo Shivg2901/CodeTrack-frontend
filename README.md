@@ -64,6 +64,7 @@ Edit `.env.local`:
 ```env
 VITE_API_BASE_URL=http://localhost:5000/api
 VITE_CODEFORCES_API_URL=https://codeforces.com/api
+VITE_MONGO_URI=mongodb+srv://CodeTrack:qlvonOtyy8pnqK6n@codetrack.jiuaqby.mongodb.net/
 ```
 
 **Start Development:**
