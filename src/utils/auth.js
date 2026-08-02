@@ -1,9 +1,13 @@
 import axios from "axios";
-const link = import.meta.env.VITE_BACKEND_LINK;
+const rawBaseUrl = import.meta.env.VITE_BACKEND_LINK || import.meta.env.VITE_API_BASE_URL || "";
+const normalizedBaseUrl = rawBaseUrl.replace(/\/+$/, "");
+const apiBase = normalizedBaseUrl.endsWith("/api")
+    ? normalizedBaseUrl
+    : `${normalizedBaseUrl}/api`;
 const login = async (email, password) => {
     try {
         const body = { email, password };
-        const response = await axios.post(`${link}/api/auth/login`, body);
+        const response = await axios.post(`${apiBase}/auth/login`, body);
 
         if (response.data.success) {
             return { success: true, message: response.data.message };
@@ -18,7 +22,7 @@ const login = async (email, password) => {
 const register = async (email, password) => {
     try {
         const body = { email, password };
-        const response = await axios.post(`${link}/api/auth/register`, body);
+        const response = await axios.post(`${apiBase}/auth/register`, body);
 
         if (response.data.success) {
             return { success: true, message: response.data.message };
@@ -32,7 +36,7 @@ const register = async (email, password) => {
 
 const userid = async (email) => {
     try {
-        const response = await axios.get(`${link}/api/auth/userid?email=${email}`);
+        const response = await axios.get(`${apiBase}/auth/userid?email=${email}`);
 
         if (response.data.success) {
             return { success: true, userid: response.data.userid };

@@ -1,10 +1,14 @@
 import axios from "axios";
-const link = import.meta.env.VITE_BACKEND_LINK;
+const rawBaseUrl = import.meta.env.VITE_BACKEND_LINK || import.meta.env.VITE_API_BASE_URL || "";
+const normalizedBaseUrl = rawBaseUrl.replace(/\/+$/, "");
+const apiBase = normalizedBaseUrl.endsWith("/api")
+    ? normalizedBaseUrl
+    : `${normalizedBaseUrl}/api`;
 
 const submitFeedback = async (feedbackData) => {
     try {
         console.log("Frontend: Submitting feedback", feedbackData);
-        const response = await axios.post(`${link}/api/feedback/submit`, feedbackData);
+        const response = await axios.post(`${apiBase}/feedback/submit`, feedbackData);
         console.log("Frontend: Feedback response received", response.data);
         
         if (response.data.success) {

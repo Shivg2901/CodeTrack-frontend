@@ -1,5 +1,9 @@
 import axios from "axios";
-const link = import.meta.env.VITE_BACKEND_LINK;
+const rawBaseUrl = import.meta.env.VITE_BACKEND_LINK || import.meta.env.VITE_API_BASE_URL || "";
+const normalizedBaseUrl = rawBaseUrl.replace(/\/+$/, "");
+const apiBase = normalizedBaseUrl.endsWith("/api")
+    ? normalizedBaseUrl
+    : `${normalizedBaseUrl}/api`;
 
 console.log("Backend link:", link); // Debug log
 
@@ -7,7 +11,7 @@ const add=async (userid,username)=>{
     try{
         console.log("Frontend: Attempting to add username", { userid, username });
         const body={userid,username};
-        const response=await axios.post(`${link}/api/user/add`, body);
+        const response=await axios.post(`${apiBase}/user/add`, body);
         console.log("Frontend: Add response received", response.data);
         
         if (response.data.success) {
@@ -24,7 +28,7 @@ const remove=async (userid,username)=>{
     try{
         console.log("Frontend: Attempting to remove username", { userid, username });
         const body={username,userid};
-        const response=await axios.post(`${link}/api/user/remove`, body);
+        const response=await axios.post(`${apiBase}/user/remove`, body);
         console.log("Frontend: Remove response received", response.data);
         
         if (response.data.success) {
@@ -40,7 +44,7 @@ const remove=async (userid,username)=>{
 const fetchusernames=async (userid)=>{
     try{
         console.log("Frontend: Fetching usernames for userid", userid);
-        const response=await axios.get(`${link}/api/user/fetchusernames?userid=${userid}`);
+        const response=await axios.get(`${apiBase}/user/fetchusernames?userid=${userid}`);
         console.log("Frontend: Fetch response received", response.data);
         
         if (response.data.success) {
